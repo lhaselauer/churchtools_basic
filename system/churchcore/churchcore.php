@@ -306,7 +306,9 @@ function churchcore__logviewer() {
     $txt.="<td>";
     if (isset($arr->p_id))
       $txt.="<nobr>$arr->vorname $arr->name [$arr->p_id]</nobr>";
-    $txt.="<td><small style=\"color:grey\">$arr->txt</small>";
+    $logtxtencoded=htmlspecialchars($arr->txt);
+    $txt.="<td><small style=\"color:grey\">$logtxtencoded</small>";
+
     $counter++;
   }
   
